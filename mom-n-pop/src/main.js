@@ -1,13 +1,15 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import router from './Router'
-import App from './App'
+import router from './router'
+import store from './store/store'
+import app from './app'
 
-Vue.use(VueRouter)
-
+// root?
 new Vue({
   el: '#app',
   router: router,
-  template: '<App/>',
-  components: { App }
+  store: store,
+  template: '<app/>', // is this the template part of the app export?
+  components: {
+    app
+  }
 })
